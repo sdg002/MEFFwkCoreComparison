@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{2A8CD21F-8985-4290-98EE-DE632C782465}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginsDeliveryFolder", "PluginsDeliveryFolder\PluginsDeliveryFolder.csproj", "{92C542C6-BCC9-4DF3-B4A0-5200E4FF4F0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppNETCore", "ConsoleAppNETCore\ConsoleAppNETCore.csproj", "{55584E59-1F30-44B6-A550-966809AE5B40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppNETFramework", "ConsoleAppNETFramework\ConsoleAppNETFramework.csproj", "{C29221A6-3035-4AB7-9201-8E1E275969DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginNewtonsoftV12", "PluginNewtonsoftV12\PluginNewtonsoftV12.csproj", "{A797069E-8BF2-427B-8F87-6A195EA5AD75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginNewtonsoftv9", "PluginNewtonsoftv9\PluginNewtonsoftv9.csproj", "{A45DE541-9917-4224-8D72-8C359F848AB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9EEB2569-BE45-4D27-9242-0B5A69499693}"
+	ProjectSection(SolutionItems) = preProject
+		CopyPlugin.bat = CopyPlugin.bat
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A8CD21F-8985-4290-98EE-DE632C782465}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A8CD21F-8985-4290-98EE-DE632C782465}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A8CD21F-8985-4290-98EE-DE632C782465}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A8CD21F-8985-4290-98EE-DE632C782465}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92C542C6-BCC9-4DF3-B4A0-5200E4FF4F0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92C542C6-BCC9-4DF3-B4A0-5200E4FF4F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92C542C6-BCC9-4DF3-B4A0-5200E4FF4F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92C542C6-BCC9-4DF3-B4A0-5200E4FF4F0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55584E59-1F30-44B6-A550-966809AE5B40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55584E59-1F30-44B6-A550-966809AE5B40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55584E59-1F30-44B6-A550-966809AE5B40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55584E59-1F30-44B6-A550-966809AE5B40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C29221A6-3035-4AB7-9201-8E1E275969DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C29221A6-3035-4AB7-9201-8E1E275969DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C29221A6-3035-4AB7-9201-8E1E275969DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C29221A6-3035-4AB7-9201-8E1E275969DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A797069E-8BF2-427B-8F87-6A195EA5AD75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A797069E-8BF2-427B-8F87-6A195EA5AD75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A797069E-8BF2-427B-8F87-6A195EA5AD75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A797069E-8BF2-427B-8F87-6A195EA5AD75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A45DE541-9917-4224-8D72-8C359F848AB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A45DE541-9917-4224-8D72-8C359F848AB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A45DE541-9917-4224-8D72-8C359F848AB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A45DE541-9917-4224-8D72-8C359F848AB9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7566920-AADA-4B05-BBF2-35A8EE19DED9}
+	EndGlobalSection
+EndGlobal
