@@ -12,7 +12,9 @@ namespace ConsoleAppNETFramework
         {
             try
             {
-                string folderWithPlugins = @"C:\Users\saurabhd\MyTrials\OtherStuff\MEFFwkCoreComparison\PluginsDeliveryFolder\out";
+                Console.WriteLine("Enter the folder which contains the folders with Plugins");
+                string folderWithPlugins = Console.ReadLine();
+                    //@"C:\Users\saurabhd\MyTrials\OtherStuff\MEFFwkCoreComparison\PluginsDeliveryFolder\out";
                 var manager = new Contracts.MEFPluginsManager(folderWithPlugins);
                 Console.WriteLine("Plugins discovered are as follows:");
                 string[] allAvailablePlugins = 
