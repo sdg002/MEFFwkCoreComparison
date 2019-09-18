@@ -3,6 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net461</TargetFramework>
+    <StartupObject>ConsoleAppNETFramework.Program2</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
