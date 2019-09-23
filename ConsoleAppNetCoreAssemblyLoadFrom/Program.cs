@@ -9,8 +9,6 @@ namespace ConsoleAppNetCoreAssemblyLoadFrom
         {
             try
             {
-                //Console.WriteLine("Enter the folder which contains the folders with Plugins");
-                //string folderWithPlugins = Console.ReadLine();
                 string folderNewtonsoftV9 = @"C:\Users\saurabhd\MyTrials\OtherStuff\MEFFwkCoreComparison\PluginsDeliveryFolder\out\PluginNewtonsoftv9\PluginNewtonsoftv9.dll";
                 string folderNewtonsoftV12 = @"C:\Users\saurabhd\MyTrials\OtherStuff\MEFFwkCoreComparison\PluginsDeliveryFolder\out\PluginNewtonsoftV12\PluginNewtonsoftv12.dll";
                 string[] pathsAssemblies = new string[] { folderNewtonsoftV9, folderNewtonsoftV12 };
