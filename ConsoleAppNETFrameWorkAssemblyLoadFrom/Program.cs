@@ -1,22 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ConsoleAppNETCore
+namespace ConsoleAppNETFrameWorkAssemblyLoadFrom
 {
-    public class Program2
+    class Program
     {
         static void Main(string[] args)
         {
             try
             {
-                //Console.WriteLine("Enter the folder which contains the folders with Plugins");
-                //string folderWithPlugins = Console.ReadLine();
                 string folderNewtonsoftV9 = @"C:\Users\saurabhd\MyTrials\OtherStuff\MEFFwkCoreComparison\PluginsDeliveryFolder\out\PluginNewtonsoftv9\PluginNewtonsoftv9.dll";
                 string folderNewtonsoftV12 = @"C:\Users\saurabhd\MyTrials\OtherStuff\MEFFwkCoreComparison\PluginsDeliveryFolder\out\PluginNewtonsoftV12\PluginNewtonsoftv12.dll";
                 string[] pathsAssemblies = new string[] { folderNewtonsoftV9, folderNewtonsoftV12 };
-                foreach(string pathAssembly in pathsAssemblies)
+                foreach (string pathAssembly in pathsAssemblies)
                 {
                     var assembly = System.Reflection.Assembly.LoadFrom(pathAssembly);
                     Type tTarget = assembly.GetTypes().FirstOrDefault(t => t.Name.ToLower() == "class1");
