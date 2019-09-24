@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Linq;
+using System.Runtime.Loader;
 
 namespace ConsoleAppNetCoreAssemblyLoadFrom
 {
-    class Program
+    class ProgramAssemLoadCtx
     {
         static void Main(string[] args)
         {
@@ -14,9 +15,8 @@ namespace ConsoleAppNetCoreAssemblyLoadFrom
                 string[] pathsAssemblies = new string[] { folderNewtonsoftV9, folderNewtonsoftV12 };
                 foreach (string pathAssembly in pathsAssemblies)
                 {
-                    //var assembly = System.Reflection.Assembly.LoadFrom(pathAssembly);
-                    //var assembly = System.Reflection.Assembly.LoadFile(pathAssembly);
-                    var assembly = System.Runtime.Loader.AssemblyLoadContext.Default.LoadFromAssemblyPath(pathAssembly);
+
+                    var assembly = AssemblyLoadContext.Default.LoadFromAssemblyPath(pathAssembly);
                     Type tTarget = assembly.GetTypes().FirstOrDefault(t => t.Name.ToLower() == "class1");
                     var plugin = Activator.CreateInstance(tTarget) as Contracts.ISomePlugin;
                     plugin.DoWork();
