@@ -31,11 +31,12 @@ echo Ok with Plugin src folder
 echo testing for EXEOUTPUT=%EXEOUTPUT%
 if not exist %EXEOUTPUT%  (
 	echo "Executable output folder :%EXEOUTPUT% was not found"
-	echo Quitting
-	exit /b 1
+	rem echo Quitting
+	mkdir %EXEOUTPUT%
+	echo "Executable output folder :%EXEOUTPUT% was created"
+	rem exit /b 1
 )
- 
-
+ echo Testing for folder=%destination%
  if exist %destination%  (
 	echo Deleting files in DESTINATION=%destination%
 	del /s /q  %destination%
