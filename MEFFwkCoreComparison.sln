@@ -24,9 +24,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PluginPollyV6", "PluginPoll
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PluginPollyV7", "PluginPollyV7\PluginPollyV7.csproj", "{9B074ED3-2DB2-4720-883E-5AF50FD53A5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppNetCoreAssemblyLoadFrom", "ConsoleAppNetCoreAssemblyLoadFrom\ConsoleAppNetCoreAssemblyLoadFrom.csproj", "{9D907F15-36D9-48BB-8F2A-2B1715F58F33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppNetCoreAssemblyLoadFrom", "ConsoleAppNetCoreAssemblyLoadFrom\ConsoleAppNetCoreAssemblyLoadFrom.csproj", "{9D907F15-36D9-48BB-8F2A-2B1715F58F33}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppNETFrameWorkAssemblyLoadFrom", "ConsoleAppNETFrameWorkAssemblyLoadFrom\ConsoleAppNETFrameWorkAssemblyLoadFrom.csproj", "{3A97A92C-FBE0-4E56-B061-B16FABBD2429}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppNetDepsJson", "ConsoleAppNetDepsJson\ConsoleAppNetDepsJson.csproj", "{224B4D91-3724-484A-8252-B196B3C7E2F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,6 +76,10 @@ Global
 		{3A97A92C-FBE0-4E56-B061-B16FABBD2429}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A97A92C-FBE0-4E56-B061-B16FABBD2429}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A97A92C-FBE0-4E56-B061-B16FABBD2429}.Release|Any CPU.Build.0 = Release|Any CPU
+		{224B4D91-3724-484A-8252-B196B3C7E2F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{224B4D91-3724-484A-8252-B196B3C7E2F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{224B4D91-3724-484A-8252-B196B3C7E2F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{224B4D91-3724-484A-8252-B196B3C7E2F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

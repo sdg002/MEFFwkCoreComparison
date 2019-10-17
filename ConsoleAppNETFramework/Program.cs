@@ -22,6 +22,11 @@ namespace ConsoleAppNETFramework
                                 PluginsWithMetaData.Select(p => p.Metadata["PluginName"] as string).
                                 OrderBy(s=>s).
                                 ToArray();
+                ///.NET Core will not allow this, but .NET Framework will allow this
+                //var a9 = System.Reflection.Assembly.LoadFrom(@"C:\Users\saurabhd\MyTrials\OtherStuff\MEFFwkCoreComparison\PluginsDeliveryFolder\out\PluginNewtonsoftv9\Newtonsoft.Json.dll");
+                //var a12 = System.Reflection.Assembly.LoadFrom(@"C:\Users\saurabhd\MyTrials\OtherStuff\MEFFwkCoreComparison\PluginsDeliveryFolder\out\PluginNewtonsoftV12\Newtonsoft.Json.dll");
+                ///
+
                 Console.WriteLine($"Found {allAvailablePlugins.Length} plugins");
                 while(true)
                 {
