@@ -15,7 +15,10 @@ We have a simple .NET Core EXE which attempts to load two different plugin class
 
 
 # Github issue
-https://github.com/dotnet/core/issues/3376
+I logged the following issues which are all connected
+- https://github.com/dotnet/coreclr/issues/27269
+- https://github.com/dotnet/core/issues/3376
+- https://github.com/dotnet/corefx/issues/41369  (this is the active one)
 
 # Overview
 Demontrates the assembly load failures in the following scenarios
@@ -34,3 +37,12 @@ Demontrates the assembly load failures in the following scenarios
 - Verify that assemblies from the project PluginNewtonsoftv12 and PluginNewtonsoftv9 are copied over to the PluginsDeliveryFolder\Out
 - Execute the EXE from the project ConsoleAppNetFramework . Select the plugin newtonv12 and then newtonv9. Notice the path to the assemblies Newtonsoft.dll. You should see 2 versions loaded from the two folders of the plugin assemblies
 - Execute the EXE from the project ConsoleAppNetCore. Select newtonv12 followed by newtonv9. This will work. Run the EXE again. Now select newtonv9 and then newtonv12. You should see an assembly load failure exception
+
+# Update on Oct 18
+I got side by side loading of dependencies to work. See project **ConsoleAppNetDepsJson.csproj**.
+- At the very start, create two instances of *AssemblyDependencyResolver* class (one with the absolute path of PluginV9.deps.json and the other with the absolute path of PluginV12.deps.json
+- Add both of these instances to a central List (lstAllDepsJsonResolvers)
+- Set up a single event handler for the Resolving event of the AssemblyLoadContext.Default instance
+In the event handler , when you get a request for Newtonsfot.Json.dll, iterate over the lstAllDepsJsonResolvers and find out which gives the best match by calling the method ResolveAssembly of AssemblyDependencyResolver.
+- Do an Assembly.LoadFile on the path returned by ResolveAssembly and collect the Assembly objects in a local List.
+- Find the assembly in the local List whose Version is nearest to the requested assembly in the event handler Resolving.
