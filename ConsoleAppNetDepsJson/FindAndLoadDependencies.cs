@@ -22,9 +22,9 @@ namespace ConsoleAppNetDepsJson
         private string[] _pathsPluginAssembly;
         List<AssemblyDependencyResolver> _lstResolvers;
 
-        public FindAndLoadDependencies(string[] pathsAssemblies)
+        public FindAndLoadDependencies(IEnumerable<string> pathsAssemblies)
         {
-            this._pathsPluginAssembly = pathsAssemblies;
+            this._pathsPluginAssembly = pathsAssemblies.ToArray();
             _lstResolvers = new List<AssemblyDependencyResolver>();
             foreach(string pathPluginAssembly in _pathsPluginAssembly)
             {
@@ -52,13 +52,13 @@ namespace ConsoleAppNetDepsJson
                 var assem = System.Reflection.Assembly.LoadFile(pathAssembly);
                 lstMatchingAssemblies.Add(assem);
             }
-            //var assembliesHighedToLowestVersion = lstMatchingAssemblies.OrderByDescending(a => a.GetName().Version);
-            //return assembliesHighedToLowestVersion.FirstOrDefault();
             var assembliesWithClosestMatchingVersion = 
                         lstMatchingAssemblies.
                         OrderBy(a => Math.Abs( arg2.Version.CompareTo(a.GetName().Version)) ).
                         ToArray();
-            return assembliesWithClosestMatchingVersion.FirstOrDefault();
+            var bestAssembly= assembliesWithClosestMatchingVersion.FirstOrDefault();
+            Trace.WriteLine($"The Resolving event found {bestAssembly.GetName()} for the requested assembly:'{arg2}'");
+            return bestAssembly;
         }
         private System.Reflection.Assembly Default_Resolving_old(AssemblyLoadContext arg1, System.Reflection.AssemblyName arg2)
         {
