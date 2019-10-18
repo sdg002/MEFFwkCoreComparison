@@ -28,7 +28,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppNetCoreAssemblyLo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppNETFrameWorkAssemblyLoadFrom", "ConsoleAppNETFrameWorkAssemblyLoadFrom\ConsoleAppNETFrameWorkAssemblyLoadFrom.csproj", "{3A97A92C-FBE0-4E56-B061-B16FABBD2429}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppNetDepsJson", "ConsoleAppNetDepsJson\ConsoleAppNetDepsJson.csproj", "{224B4D91-3724-484A-8252-B196B3C7E2F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppNetDepsJson", "ConsoleAppNetDepsJson\ConsoleAppNetDepsJson.csproj", "{224B4D91-3724-484A-8252-B196B3C7E2F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{1C73A49C-6474-4BB8-BA36-07117E595B8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,6 +82,10 @@ Global
 		{224B4D91-3724-484A-8252-B196B3C7E2F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{224B4D91-3724-484A-8252-B196B3C7E2F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{224B4D91-3724-484A-8252-B196B3C7E2F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C73A49C-6474-4BB8-BA36-07117E595B8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C73A49C-6474-4BB8-BA36-07117E595B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C73A49C-6474-4BB8-BA36-07117E595B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C73A49C-6474-4BB8-BA36-07117E595B8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
