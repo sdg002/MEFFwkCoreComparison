@@ -45,6 +45,30 @@ namespace ConsoleAppNetDepsJson
                 var pathAssembly = resolver.ResolveAssemblyToPath(arg2);
                 if (pathAssembly == null) continue;
 
+                //var reader = new System.Reflection.Metadata.MetadataReader() //too difficult - not sure how to fix this
+                //    //https://github.com/dotnet/corefx/issues/41857
+                //var definition =reader.GetAssemblyDefinition()
+
+                var assem = System.Reflection.Assembly.LoadFile(pathAssembly);
+                lstMatchingAssemblies.Add(assem);
+            }
+            //var assembliesHighedToLowestVersion = lstMatchingAssemblies.OrderByDescending(a => a.GetName().Version);
+            //return assembliesHighedToLowestVersion.FirstOrDefault();
+            var assembliesWithClosestMatchingVersion = 
+                        lstMatchingAssemblies.
+                        OrderBy(a => Math.Abs( arg2.Version.CompareTo(a.GetName().Version)) ).
+                        ToArray();
+            return assembliesWithClosestMatchingVersion.FirstOrDefault();
+        }
+        private System.Reflection.Assembly Default_Resolving_old(AssemblyLoadContext arg1, System.Reflection.AssemblyName arg2)
+        {
+            Trace.WriteLine($"Default_Resolving event, {arg2}");
+            var lstMatchingAssemblies = new List<System.Reflection.Assembly>();
+            foreach (var resolver in _lstResolvers)
+            {
+                var pathAssembly = resolver.ResolveAssemblyToPath(arg2);
+                if (pathAssembly == null) continue;
+
                 //var assem = AssemblyLoadContext.Default.LoadFromAssemblyPath(pathAssembly); //Does not allow loading 2 versions of Newtonsoft                
                 //var assem = System.Reflection.Assembly.ReflectionOnlyLoadFrom(pathAssembly); //Operation is not supported on this platform
 
