@@ -38,7 +38,7 @@ Demontrates the assembly load failures in the following scenarios
 - Execute the EXE from the project ConsoleAppNetFramework . Select the plugin newtonv12 and then newtonv9. Notice the path to the assemblies Newtonsoft.dll. You should see 2 versions loaded from the two folders of the plugin assemblies
 - Execute the EXE from the project ConsoleAppNetCore. Select newtonv12 followed by newtonv9. This will work. Run the EXE again. Now select newtonv9 and then newtonv12. You should see an assembly load failure exception
 
-# Update on Oct 18
+# Update on Oct 18, 2019
 I got side by side loading of dependencies to work. See project **ConsoleAppNetDepsJson.csproj**.
 - At the very start, create two instances of *AssemblyDependencyResolver* class (one with the absolute path of PluginV9.deps.json and the other with the absolute path of PluginV12.deps.json
 - Add both of these instances to a central List (lstAllDepsJsonResolvers)
